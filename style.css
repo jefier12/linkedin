@@ -7,7 +7,7 @@
   font-family: "Nanum Gothic", sans-serif;
 }
 
-body{
+body {
   display: flex;
   flex-direction: column;
   background-color: #f4f2ee;
@@ -16,84 +16,80 @@ body{
 
 /* Header */
 
-.logo{
+.logo {
   text-decoration: none;
 }
 
-.logo__img{
+.logo__img {
   display: block;
   width: 35px;
   margin-right: 17px;
 }
 
-.header__container{
+.header__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Añadir sombra al header */
 }
 
-.header__left{
+.header__left {
   display: flex;
   align-items: center;
-  padding: 10px;
 }
 
-.navegation{
+.navegation {
   display: flex;
-  gap: 20px;
+  gap: 30px; /* Aumentar el espacio entre los elementos de navegación */
   align-items: center;
 }
 
-.navegation__list{
+.navegation__list {
   display: flex;
   list-style: none;
   align-items: center;
   gap: 20px;
 }
 
-.navegation__item{
+.navegation__item {
   display: flex;
   align-items: center;
 }
 
-.navegation__link{
+.navegation__link {
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 2px;
+  gap: 8px; /* Espacio entre el icono y el texto */
   text-align: center;
   font-weight: 400;
   min-height: 52px;
-  min-width: 85px;
+  padding: 0 10px;
   position: relative;
-  transition: 1s;
+  transition: color 0.3s ease;
+  color: #5f5f5f;
+  font-size: 0.9rem;
 }
 
 .navegation__link:hover {
-  color: #222;
+  color: #0073b1; /* Color al pasar el ratón similar al estilo de LinkedIn */
 }
 
-.navegation__icon{
+.navegation__icon {
   font-size: 1.5rem;
 }
 
-.navegation__span{
-  font-size: 0.8rem;
-}
-
-.search{
+.search {
   background-color: #edf3f8;
   display: flex;
   align-items: center;
-  border: 10px;
-  width: 100%;
-  padding: 0 15px;
   border-radius: 8px;
+  width: 300px; /* Ajustar el ancho de la barra de búsqueda */
+  padding: 5px 15px;
 }
 
-.search__input{
+.search__input {
   background-color: transparent;
   border: none;
   outline: none;
@@ -101,9 +97,66 @@ body{
   padding: 8px;
 }
 
-.search__icon{
+.search__icon {
   font-size: 1.2rem;
   cursor: pointer;
+}
+
+/* Perfil y menú desplegable */
+
+.profile__container {
+  position: relative;
+  cursor: pointer;
+}
+
+.profile__link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: #5f5f5f;
+}
+
+.profile__link:hover {
+  color: #0073b1;
+}
+
+.profile__dropdown {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 10;
+  width: 180px;
+}
+
+.profile__dropdown li {
+  list-style: none;
+}
+
+.profile__dropdown li a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #5f5f5f;
+  font-size: 0.9rem;
+}
+
+.profile__dropdown li a:hover {
+  background-color: #edf3f8;
+  color: #333;
+}
+
+/* Mostrar menú desplegable al hacer hover */
+.profile__container:hover .profile__dropdown {
+  display: block;
+}  
+
+.bx-chevron-down {
+  font-size: 1rem;
 }
 
 
